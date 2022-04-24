@@ -22,7 +22,6 @@ app.use((req, res, next) => {
     next();
 });
 
-
 // app.get('/api/v1/tours', getAllTours);
 // app.post('/api/v1/tours', createTour);
 // app.get('/api/v1/tours/:id', getTour);
@@ -33,9 +32,6 @@ app.use((req, res, next) => {
 app.use('/api/v1/tours', tourRouter);
 app.use('/api/v1/users', userRouter);
 
-// 4. START SERVER
-const port = 3000;
-app.listen(port, () => {
-    console.log(`App running on port ${port}...`);
-});
+
+module.exports = app;
 
